@@ -1,0 +1,6 @@
+title: Srishti
+theme: minima
+markdown: kramdown
+collections:
+  projects:
+    output: true
