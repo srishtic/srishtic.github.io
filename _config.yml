@@ -4,3 +4,10 @@ markdown: kramdown
 collections:
   projects:
     output: true
+
+header_pages:
+  - index.md
+  - projects/index.md
+  - writing/index.md
+  - about.md
+  - contact.md
