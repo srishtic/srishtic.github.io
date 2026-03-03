@@ -2,19 +2,21 @@
 layout: minima
 ---
 
-<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
+<link rel="stylesheet" href="custom.css">
 
 <div class="top-section">
-  <div class="row">
-    <div class="col"><a href="link1"><img src="image1.jpg" alt="Image 1"></a></div>
-    <div class="col"><a href="link2"><img src="image2.jpg" alt="Image 2"></a></div>
-    <div class="col"><a href="link3"><img src="image3.jpg" alt="Image 3"></a></div>
+  <div class="grid-container">
+    <div class="grid-item">Image 1</div>
+    <div class="grid-item">Image 2</div>
+    <div class="grid-item">Image 3</div>
   </div>
 </div>
 
 <div class="bottom-section">
-  <div class="row">
-    <div class="col">Card 1 Content</div>
-    <div class="col">Card 2 Content</div>
+  <div class="card-container">
+    <div class="card">Card 1</div>
+    <div class="card">Card 2</div>
   </div>
 </div>
+
+{{ content }}
