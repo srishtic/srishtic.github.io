@@ -3,33 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home Layout</title>
     <link rel="stylesheet" href="/path/to/custom.css">
-    <style>
-        /* Responsive grid layout */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            gap: 20px;
-            padding: 20px;
-        }
-        .card {
-            background-color: #fff;
-            border: 1px solid #e0e0e0;
-            border-radius: 8px;
-            padding: 16px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-    </style>
+    <title>Home</title>
 </head>
 <body>
-    <div class="grid-container">
-        <div class="card">Card 1 Content</div>
-        <div class="card">Card 2 Content</div>
-        <div class="card">Card 3 Content</div>
-        <div class="card">Card 4 Content</div>
-        <div class="card">Card 5 Content</div>
-        <div class="card">Card 6 Content</div>
+    <div class="layout-wrapper">
+        {{ content }}
     </div>
+    <script src="/path/to/script.js"></script>
 </body>
 </html>
