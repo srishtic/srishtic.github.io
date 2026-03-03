@@ -4,39 +4,43 @@ layout: default
 
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
-<!-- Top Section: 3 columns with images/links -->
-<div class="top-section">
+<!-- Top Section: 3 columns with image links -->
+<section class="top-section">
   <div class="image-grid">
-    <div class="image-item">
-      <a href="#">
-        <img src="placeholder1.jpg" alt="What I'm Listening To">
-      </a>
-    </div>
-    <div class="image-item">
-      <a href="#">
-        <img src="placeholder2.jpg" alt="What I'm Reading">
-      </a>
-    </div>
-    <div class="image-item">
-      <a href="#">
-        <img src="placeholder3.jpg" alt="Book Club">
-      </a>
-    </div>
-  </div>
-</div>
 
-<!-- Bottom Section: 2 columns with cards -->
-<div class="bottom-section">
+    <div class="image-item">
+      <a href="#" class="image-link">
+        <div class="image-frame">
+          <!-- replace src with album art URL -->
+        </div>
+        <span class="image-label">currently listening</span>
+      </a>
+    </div>
+
+    <div class="image-item">
+      <a href="#" class="image-link">
+        <div class="image-frame">
+          <!-- replace with book cover URL -->
+        </div>
+        <span class="image-label">currently reading</span>
+      </a>
+    </div>
+
+    <div class="image-item">
+      <a href="#" class="image-link">
+        <div class="image-frame">
+          <!-- replace with your image URL -->
+        </div>
+        <span class="image-label">···</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- Bottom Section: 2 columns rendered from page content -->
+<section class="bottom-section">
   <div class="card-grid">
-    <div class="card">
-      <h2>Paid Employment</h2>
-      <p>Content goes here</p>
-    </div>
-    <div class="card">
-      <h2>Other Projects</h2>
-      <p>Content goes here</p>
-    </div>
+    {{ content }}
   </div>
-</div>
-
-{{ content }}
+</section>

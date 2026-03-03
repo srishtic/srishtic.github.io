@@ -1,59 +1,142 @@
-.container {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
-  padding: 20px;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+
+/* ── Palette ─────────────────────────────────────────────── */
+:root {
+  --sage:       #CCD5AE;
+  --light-sage: #E9EDC9;
+  --cream:      #FEFAE0;
+  --peach:      #FAEDCD;
+  --tan:        #D4A373;
+  --text:       #2d2416;
+  --muted:      #8b7355;
 }
 
-.text,
-.card {
-  background-color: #E9EDC9;
-  color: #333;
-  padding: 15px;
-  border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-.card {
-  transition: transform 0.2s;
-}
-
-.card:hover {
-  transform: scale(1.05);
-}
-
-h1, h2, h3 {
-  font-family: 'Arial', sans-serif;
-  margin-bottom: 10px;
-}
-
-p {
-  line-height: 1.6;
-}
-
-.image {
-  max-width: 100%;
-  border-radius: 8px;
-}
+/* ── Reset / base ────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; }
 
 body {
-  background-color: #FEFAE0;
-  color: #333;
-  font-family: 'Helvetica Neue', sans-serif;
+  background-color: var(--cream);
+  color: var(--text);
+  font-family: 'DM Sans', 'Helvetica Neue', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
   margin: 0;
   padding: 0;
 }
 
-.button {
-  background-color: #D4A373;
-  color: white;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+a { color: var(--tan); }
+a:hover { color: var(--text); }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lora', serif;
+  font-weight: 600;
 }
 
-.button:hover {
-  background-color: #CCD5AE;
+/* ── Top section — 3-column image grid ───────────────────── */
+.top-section { margin-bottom: 3rem; }
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.image-item a.image-link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.image-frame {
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: var(--peach);
+  background-image: linear-gradient(135deg, var(--peach) 0%, var(--light-sage) 100%);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-item:nth-child(2) .image-frame {
+  background-image: linear-gradient(135deg, var(--light-sage) 0%, var(--sage) 100%);
+}
+
+.image-item:nth-child(3) .image-frame {
+  background-image: linear-gradient(135deg, var(--sage) 0%, var(--peach) 100%);
+}
+
+.image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* hide broken-image icon when no real src is set */
+.image-frame img:not([src]),
+.image-frame img[src=""] { display: none; }
+
+.image-item:hover .image-frame {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(212, 163, 115, 0.25);
+}
+
+.image-label {
+  display: block;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-top: 0.6rem;
+  font-weight: 400;
+}
+
+/* ── Bottom section — 2-column card grid ─────────────────── */
+.bottom-section { margin-top: 0.5rem; }
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.card {
+  background-color: var(--light-sage);
+  border-radius: 16px;
+  padding: 1.75rem 2rem;
+  transition: background-color 0.25s ease;
+}
+
+.card:hover { background-color: var(--peach); }
+
+.card h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: var(--text);
+  margin: 0 0 1rem 0;
+  padding-bottom: 0.65rem;
+  border-bottom: 1.5px solid var(--sage);
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card ul li { padding: 0.3rem 0; }
+
+.card ul li a {
+  color: var(--text);
+  text-decoration: none;
+  font-size: 0.88rem;
+  transition: color 0.2s;
+}
+
+.card ul li a:hover { color: var(--tan); }
+
+/* ── Responsive ──────────────────────────────────────────── */
+@media (max-width: 600px) {
+  .image-grid,
+  .card-grid { grid-template-columns: 1fr; }
 }
