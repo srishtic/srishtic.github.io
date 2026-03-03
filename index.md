@@ -1,3 +1,7 @@
+---
+layout: home
+---
+
 <div class="card">
   <h2>Paid Employment</h2>
   <ul>
@@ -7,16 +11,9 @@
   </ul>
 </div>
 <div class="card">
-  <h2>Other projects</h2>
+  <h2>Other Projects</h2>
   <ul>
     <li><a href="https://link-to-other-project-1.com">Other Project 1</a></li>
     <li><a href="https://link-to-other-project-2.com">Other Project 2</a></li>
-  </ul>
-</div>
-<div class="card">
-  <h2>Misc</h2>
-  <ul>
-    <li><a href="https://link-to-misc-1.com">Misc Link 1</a></li>
-    <li><a href="https://link-to-misc-2.com">Misc Link 2</a></li>
   </ul>
 </div>
