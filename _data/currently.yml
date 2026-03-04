@@ -1,0 +1,11 @@
+listening:
+  title: "Album Name"
+  artist: "Artist Name"
+  url: "https://open.spotify.com/album/YOUR_ALBUM_ID"
+  image: "https://image-url.jpg"
+
+reading:
+  title: "Book Title"
+  author: "Author Name"
+  url: "#"
+  image: "https://image-url.jpg"
