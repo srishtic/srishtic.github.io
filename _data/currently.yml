@@ -2,10 +2,10 @@ listening:
   title: "Almadura"
   artist: "iLe"
   url: "https://open.spotify.com/album/5ggXegN9GWgNOSS83gZHGT?si=zVj-PptySvSzYk3EYP0kbA"
-  image: "https://github.com/srishtic/srishtic.github.io/blob/main/assets/images/Almadura.jpg"
+  image: "https://raw.githubusercontent.com/srishtic/srishtic.github.io/main/assets/images/Almadura.jpg"
 
 reading:
   title: "Martyr"
   author: "Kaveh Akbar"
   url: "https://www.goodreads.com/book/show/139400713-martyr"
-  image: "https://github.com/srishtic/srishtic.github.io/blob/main/assets/images/Martyr.png"
+  image: "https://raw.githubusercontent.com/srishtic/srishtic.github.io/main/assets/images/Martyr.png"
