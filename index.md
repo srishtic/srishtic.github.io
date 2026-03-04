@@ -5,9 +5,9 @@ layout: home
 <div class="card">
   <h2>Paid Employment</h2>
   <ul>
-    <li><a href="https://link-to-project-1.com">Project 1</a></li>
-    <li><a href="https://link-to-project-2.com">Project 2</a></li>
-    <li><a href="https://link-to-project-3.com">Project 3</a></li>
+    <li>Project 1</li>
+    <li>Project 2</li>
+    <li>Project 3</li>
   </ul>
 </div>
 <div class="card">
