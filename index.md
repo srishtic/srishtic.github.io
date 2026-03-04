@@ -5,8 +5,14 @@ layout: home
 <div class="card">
   <h2>Paid Employment</h2>
   <ul>
-    <li>Research Analyst (Part-Time/Temp) at Smith College</li>
-    <li>Business Analyst (Part-Time) at Q3Labs</li>
+    <li><b>Research Analyst</b><br>
+      Part-Time/Temp<br>
+      Smith College
+    </li>
+    <li><b>Business Analyst</b><br>
+      Part-Time<br>
+      Q3Labs
+    </li>
   </ul>
 </div>
 <div class="card">
