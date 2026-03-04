@@ -9,18 +9,18 @@ layout: default
   <div class="image-grid">
 
     <div class="image-item">
-      <a href="#" class="image-link">
+      <a href="{{ site.data.currently.listening.url }}" class="image-link">
         <div class="image-frame">
-          <!-- replace src with album art URL -->
+          <img src="{{ site.data.currently.listening.image }}" alt="{{ site.data.currently.listening.title }}">
         </div>
         <span class="image-label">currently listening</span>
       </a>
     </div>
 
     <div class="image-item">
-      <a href="#" class="image-link">
+      <a href="{{ site.data.currently.reading.url }}" class="image-link">
         <div class="image-frame">
-          <!-- replace with book cover URL -->
+          <img src="{{ site.data.currently.reading.image }}" alt="{{ site.data.currently.reading.title }}">
         </div>
         <span class="image-label">currently reading</span>
       </a>
