@@ -38,9 +38,55 @@ layout: default
   </div>
 </section>
 
-<!-- Bottom Section: 2 columns rendered from page content -->
-<section class="bottom-section">
-  <div class="card-grid">
-    {{ content }}
+<!-- Work History Timeline Section -->
+<section class="timeline-section">
+  <h2 class="timeline-header">Work History</h2>
+  <div class="timeline-container">
+    {% for job in site.data.work-history.employment %}
+    <div class="timeline-item {% if job.current %}current{% endif %}">
+      <div class="timeline-content">
+        <div class="timeline-item-title">{{ job.title }}</div>
+        <div class="timeline-item-meta">{{ job.organization }}</div>
+        <div class="timeline-item-meta">{{ job.location }}</div>
+        <div class="timeline-item-date">{{ job.start_date }} – {{ job.end_date }}</div>
+        {% if job.highlights %}
+        <ul class="timeline-item-highlights">
+          {% for highlight in job.highlights limit: 4 %}
+          <li>{{ highlight }}</li>
+          {% endfor %}
+        </ul>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
   </div>
 </section>
+
+<!-- Freelance Work Section -->
+<section class="freelance-section">
+  <h2 class="freelance-header">Freelance Work</h2>
+  <div class="freelance-grid">
+    {% for project in site.data.work-history.freelance %}
+    <div class="freelance-card {% if project.current %}current{% endif %}">
+      <h4>{{ project.title }}</h4>
+      <div class="organization">{{ project.organization }}</div>
+      <p>{{ project.description }}</p>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Non-Work Projects Section -->
+<section class="projects-section">
+  <h2 class="projects-header">Non-Work Projects</h2>
+  <div class="projects-list">
+    <div class="project-item">
+      <a href="/projects/masters-dissertation/">Master's Dissertation: Global History</a>
+    </div>
+    <div class="project-item">
+      <a href="/projects/inscription-interface/">South Indian Inscription Interface</a>
+    </div>
+  </div>
+</section>
+
+{{ content }}

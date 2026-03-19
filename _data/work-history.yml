@@ -1,0 +1,47 @@
+# Professional Experience Timeline
+employment:
+  - title: "Research Analyst"
+    organization: "Consortium on Financing Higher Education, MIT"
+    location: "Cambridge, Massachusetts"
+    start_date: "August 2022"
+    end_date: "November 2025"
+    highlights:
+      - "Managed and analyzed datasets for 39 member institutions, providing data users with visualizations and statistical insights using SQL, R, and Tableau."
+      - "Optimized ETL pipelines using Python and SQL, reducing execution time."
+      - "Automated data collection and validation processes for survey data using Python (pandas)."
+      - "Streamlined report generation workflows using R (RODBC), ggplot2, and flextable."
+      - "Facilitated project management for major institutional surveys (SNS 2022/2024, ESS 2025)."
+
+  - title: "Education Research Analyst"
+    organization: "Education and Workforce Development Group, RTI International"
+    location: "Berkeley, California"
+    start_date: "August 2020"
+    end_date: "August 2022"
+    highlights:
+      - "Processed and analyzed educational datasets (~500,000 records) using R and Stata."
+      - "Developed and validated machine learning-generated results for student records major coding."
+      - "Managed integration and quality control of multiple data sources (FAFSA, National Student Clearinghouse)."
+      - "Key projects: NPSAS, HSLS, National Study of Learning Mindsets."
+
+  - title: "Program Associate (AmeriCorps VISTA)"
+    organization: "West Contra Costa Public Education Fund"
+    location: "Richmond, California"
+    start_date: "August 2019"
+    end_date: "August 2020"
+    highlights:
+      - "Analyzed student data using R for program development and strategic grant writing."
+      - "Managed annual scholarship program and Bradley Arts Mini-Grants program ($40,000 distributed to 50 projects)."
+
+# Freelance Projects
+freelance:
+  - title: "Research Analyst (Part-Time)"
+    organization: "Smith College"
+    url: "/projects/"
+    description: "Ongoing research and analysis work"
+    current: true
+
+  - title: "Business Analyst (Part-Time)"
+    organization: "Q3Labs"
+    url: "/projects/"
+    description: "Business analysis and strategy"
+    current: true

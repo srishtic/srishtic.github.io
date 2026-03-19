@@ -135,8 +135,247 @@ h1, h2, h3, h4, h5, h6 {
 
 .card ul li a:hover { color: var(--tan); }
 
+/* ── Timeline Section ────────────────────────────────────── */
+.timeline-section {
+  margin: 2rem 0;
+}
+
+.timeline-header {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+
+.timeline-container {
+  position: relative;
+  padding-left: 2rem;
+}
+
+/* Center line */
+.timeline-container::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--tan);
+}
+
+.timeline-item {
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+/* Dot on timeline */
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2.6rem;
+  top: 0.4rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background-color: var(--cream);
+  border: 2.5px solid var(--tan);
+  z-index: 1;
+}
+
+.timeline-item.current::before {
+  background-color: var(--tan);
+  width: 1.5rem;
+  height: 1.5rem;
+  left: -2.75rem;
+  top: 0.25rem;
+}
+
+.timeline-content {
+  background-color: var(--light-sage);
+  border-radius: 12px;
+  padding: 1.25rem 1.5rem;
+  transition: background-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.timeline-item.current .timeline-content {
+  background-color: var(--peach);
+  box-shadow: 0 4px 12px rgba(212, 163, 115, 0.2);
+}
+
+.timeline-content:hover {
+  background-color: var(--peach);
+}
+
+.timeline-item-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem 0;
+  color: var(--text);
+}
+
+.timeline-item-meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.timeline-item-date {
+  font-size: 0.75rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.75rem;
+}
+
+.timeline-item-highlights {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--text);
+  margin: 0;
+  padding-left: 1rem;
+  list-style: none;
+}
+
+.timeline-item-highlights li {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-item-highlights li::before {
+  content: '—';
+  position: absolute;
+  left: -0.8rem;
+  color: var(--muted);
+}
+
+/* Freelance Section */
+.freelance-section {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--sage);
+}
+
+.freelance-header {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+  display: flex;
+  align-items: center;
+}
+
+.freelance-header::before {
+  content: '✦';
+  margin-right: 0.6rem;
+  color: var(--tan);
+  font-size: 1rem;
+}
+
+.freelance-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.freelance-card {
+  background-color: var(--peach);
+  border-radius: 12px;
+  padding: 1.5rem;
+  border-left: 4px solid var(--tan);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.freelance-card.current {
+  background-color: var(--sage);
+  border-left: 4px solid var(--tan);
+  box-shadow: inset 0 0 0 1.5px var(--tan);
+}
+
+.freelance-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(212, 163, 115, 0.2);
+}
+
+.freelance-card h4 {
+  margin: 0 0 0.25rem 0;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.freelance-card .organization {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-bottom: 0.5rem;
+  font-weight: 400;
+}
+
+.freelance-card p {
+  font-size: 0.85rem;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* Non-Work Projects Section */
+.projects-section {
+  margin-top: 2rem;
+}
+
+.projects-header {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: var(--text);
+}
+
+.projects-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.project-item {
+  background-color: var(--light-sage);
+  border-radius: 12px;
+  padding: 1.5rem;
+  transition: background-color 0.25s ease;
+  text-align: center;
+}
+
+.project-item:hover {
+  background-color: var(--sage);
+}
+
+.project-item a {
+  text-decoration: none;
+  color: var(--text);
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.project-item a:hover {
+  color: var(--tan);
+}
+
 /* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 600px) {
   .image-grid,
-  .card-grid { grid-template-columns: 1fr; }
+  .card-grid,
+  .freelance-grid,
+  .projects-list { grid-template-columns: 1fr; }
+
+  .timeline-container {
+    padding-left: 1.5rem;
+  }
+
+  .timeline-item::before {
+    left: -2.1rem;
+  }
+
+  .timeline-item.current::before {
+    left: -2.2rem;
+  }
 }
