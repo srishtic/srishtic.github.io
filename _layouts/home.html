@@ -157,7 +157,10 @@ layout: default
       <div class="education-timeline">
         {% for item in education_items %}
         <article class="education-node">
-          <div class="education-card">
+          <div class="education-card education-type-{{ item.type | default: 'course' }}">
+            {% if item.type %}
+            <div class="education-type-badge">{{ item.type }}</div>
+            {% endif %}
             <div class="education-card-title">{{ item.institution }}</div>
             {% if item.department %}
             <div class="education-card-subtitle">{{ item.department }}</div>
