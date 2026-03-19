@@ -34,50 +34,54 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ── Career Tree Section ─────────────────────────────────── */
 .career-tree-section {
-  margin: 1rem 0 2rem;
+  margin: 0.5rem 0 2rem;
   position: relative;
 }
 
-.tree-title {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin-bottom: 2.5rem;
-  color: var(--text);
-  letter-spacing: 0.02em;
-}
-
-.tree-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2rem;
+.vertical-tree {
   position: relative;
-  min-height: 400px;
+  max-width: 920px;
+  margin: 0 auto;
+  padding-left: 2.2rem;
 }
 
-.tree-column {
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
+.vertical-tree::before {
+  content: '';
+  position: absolute;
+  top: 0.2rem;
+  bottom: 0.2rem;
+  left: 0.8rem;
+  width: 2px;
+  background: linear-gradient(var(--sage), var(--tan));
+  opacity: 0.7;
 }
 
-.column-label {
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  color: var(--muted);
-  font-weight: 500;
-  margin-bottom: 0.5rem;
+.timeline-node {
+  position: relative;
+  margin-bottom: 1.4rem;
+}
+
+.timeline-node::before {
+  content: '';
+  position: absolute;
+  left: -1.72rem;
+  top: 1.15rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--cream);
+  border: 2px solid var(--tan);
 }
 
 /* Job Cards */
 .job-card {
-  background-color: #fff;
-  border: 1px solid #f0f0f0;
-  border-radius: 8px;
+  background-color: var(--cream);
+  border: 1.5px solid var(--sage);
+  border-radius: 12px;
   padding: 1.25rem;
-  cursor: pointer;
+  cursor: default;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  box-shadow: none;
   position: relative;
   overflow: hidden;
 }
@@ -97,8 +101,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .job-card:hover {
   border-color: var(--tan);
-  box-shadow: 0 8px 24px rgba(212, 163, 115, 0.15);
-  transform: translateY(-4px);
+  box-shadow: 0 6px 18px rgba(212, 163, 115, 0.12);
+  transform: translateY(-2px);
 }
 
 .job-card:hover::before {
@@ -106,166 +110,131 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-header {
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.9rem;
   border-bottom: 1px solid #f5f5f5;
   padding-bottom: 0.75rem;
 }
 
 .card-title {
-  font-size: 0.95rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--text);
   margin: 0 0 0.25rem 0;
 }
 
 .card-subtitle {
-  font-size: 0.75rem;
+  font-size: 0.82rem;
   color: var(--tan);
   font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin: 0;
-}
-
-.card-body {
-  font-size: 0.85rem;
-  line-height: 1.5;
-  color: var(--text);
-}
-
-.card-org {
-  font-weight: 500;
-  margin-bottom: 0.25rem;
-  color: var(--text);
-}
-
-.card-location {
-  font-size: 0.8rem;
-  color: var(--muted);
-  margin-bottom: 0.3rem;
+  margin: 0 0 0.45rem;
 }
 
 .card-date {
-  font-size: 0.75rem;
+  font-size: 0.74rem;
   color: var(--muted);
   text-transform: uppercase;
-  letter-spacing: 0.03em;
-  margin-bottom: 0.6rem;
+  letter-spacing: 0.08em;
+  margin-bottom: 0;
 }
 
-.card-description {
-  font-size: 0.8rem;
-  color: var(--text);
-  margin: 0.6rem 0 0;
-  line-height: 1.5;
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: opacity 0.3s ease, max-height 0.3s ease;
+.card-block {
+  margin-top: 0.85rem;
 }
 
-.job-card:hover .card-description {
-  opacity: 1;
-  max-height: 200px;
-}
-
-.card-highlights {
-  margin-top: 0.8rem;
-  padding-top: 0.8rem;
-  border-top: 1px solid #f5f5f5;
-  opacity: 0;
-  max-height: 0;
-  overflow: hidden;
-  transition: opacity 0.3s ease 0.1s, max-height 0.3s ease 0.1s;
-}
-
-.job-card:hover .card-highlights {
-  opacity: 1;
-  max-height: 300px;
-}
-
-.highlight-item {
-  font-size: 0.75rem;
+.block-label {
+  margin: 0 0 0.25rem;
+  font-family: 'DM Sans', 'Helvetica Neue', sans-serif;
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--muted);
-  margin: 0.4rem 0;
-  padding-left: 0.5rem;
-  position: relative;
+  font-weight: 600;
 }
 
-.highlight-item::before {
-  content: '•';
-  position: absolute;
-  left: 0;
-  color: var(--tan);
+.block-text {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.55;
+  color: var(--text);
 }
 
-/* MIT Card styling */
-.mit-hub .mit-card {
-  border: 2px solid var(--sage);
-  background: linear-gradient(135deg, rgba(205, 213, 174, 0.08) 0%, rgba(233, 237, 201, 0.05) 100%);
-  scale: 1.02;
-}
-
-.mit-hub .mit-card:hover {
-  scale: 1.06;
-  border-color: var(--tan);
-}
-
-/* Freelance cards */
-.freelance-branch {
-  align-items: flex-start;
-}
-
-.branch-container {
+.skills-wrap {
   display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-  width: 100%;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.skill-pill {
+  display: inline-block;
+  border: 1px solid var(--light-sage);
+  border-radius: 999px;
+  padding: 0.22rem 0.55rem;
+  font-size: 0.78rem;
+  color: var(--text);
+  background-color: rgba(233, 237, 201, 0.35);
+}
+
+.trunk-card.role-1 { border-color: var(--tan); }
+.trunk-card.role-2 { border-color: var(--sage); }
+.trunk-card.role-3 { border-color: var(--light-sage); }
+
+.branch-node {
+  position: relative;
+  margin-top: 1.8rem;
+  padding-top: 0.4rem;
+}
+
+.branch-node::before {
+  content: '';
+  position: absolute;
+  left: -1.36rem;
+  top: 0.7rem;
+  width: 1.35rem;
+  height: 2px;
+  background-color: var(--tan);
+}
+
+.branch-label {
+  margin: 0 0 0.8rem;
+  font-size: 0.74rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.freelance-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
 }
 
 .freelance-card {
-  border-color: var(--peach);
-  background-color: rgba(250, 237, 205, 0.3);
-}
-
-.freelance-card:hover {
-  background-color: var(--peach);
   border-color: var(--tan);
-}
-
-/* SVG Connector Lines */
-.tree-lines {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 200px;
-  pointer-events: none;
-  opacity: 0.3;
-  z-index: -1;
-}
-
-.connector-line {
-  stroke: var(--tan);
-  stroke-width: 2;
 }
 
 /* ── Responsive ──────────────────────────────────────────── */
 @media (max-width: 1024px) {
-  .tree-container {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  .vertical-tree {
+    max-width: 100%;
   }
 
-  .tree-lines {
-    display: none;
+  .freelance-grid {
+    grid-template-columns: 1fr;
   }
 }
 
 @media (max-width: 600px) {
-  .tree-container {
-    grid-template-columns: 1fr;
+  .vertical-tree {
+    padding-left: 1.6rem;
+  }
+
+  .vertical-tree::before {
+    left: 0.5rem;
+  }
+
+  .timeline-node::before {
+    left: -1.34rem;
   }
 
   .job-card {
@@ -276,7 +245,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.9rem;
   }
 
-  .card-body {
-    font-size: 0.8rem;
+  .block-text {
+    font-size: 0.86rem;
   }
 }

@@ -6,76 +6,53 @@ layout: default
 
 <!-- Career Tree Section -->
 <section class="career-tree-section">
-  <h2 class="tree-title">Career Path</h2>
-  
-  <div class="tree-container">
-    <!-- Past Roles Column -->
-    <div class="tree-column past-roles">
-      <div class="column-label">Background</div>
-      {% for role in site.data['work-history'].career_tree.past reversed %}
-      <div class="job-card">
+  <div class="vertical-tree">
+    {% for role in site.data['work-history'].career_tree.past %}
+    <article class="timeline-node">
+      <div class="job-card trunk-card role-{{ forloop.index }}">
         <div class="card-header">
           <div class="card-title">{{ role.title }}</div>
-          <div class="card-subtitle">{{ role.subtitle }}</div>
+          <div class="card-date">{{ role.period }}</div>
         </div>
-        <div class="card-body">
-          <div class="card-org">{{ role.organization }}</div>
-          <div class="card-location">{{ role.location }}</div>
-          <div class="card-date">{{ role.start_date }} – {{ role.end_date }}</div>
-          <p class="card-description">{{ role.description }}</p>
-        </div>
-      </div>
-      {% endfor %}
-    </div>
 
-    <!-- MIT Hub -->
-    <div class="tree-column mit-hub">
-      <div class="column-label">Current (transitioned)</div>
-      {% assign mit = site.data['work-history'].career_tree.current %}
-      <div class="job-card mit-card">
-        <div class="card-header">
-          <div class="card-title">{{ mit.title }}</div>
-          <div class="card-subtitle">{{ mit.subtitle }}</div>
+        <div class="card-block">
+          <h3 class="block-label">Organization</h3>
+          <p class="block-text">{{ role.organization_description }}</p>
         </div>
-        <div class="card-body">
-          <div class="card-org">{{ mit.organization }}</div>
-          <div class="card-location">{{ mit.location }}</div>
-          <div class="card-date">{{ mit.start_date }} – {{ mit.end_date }}</div>
-          <p class="card-description">{{ mit.description }}</p>
-          <div class="card-highlights">
-            {% for highlight in mit.highlights %}
-            <div class="highlight-item">{{ highlight }}</div>
+
+        <div class="card-block">
+          <h3 class="block-label">My Role</h3>
+          <p class="block-text">{{ role.my_role }}</p>
+        </div>
+
+        <div class="card-block">
+          <h3 class="block-label">Key Skills</h3>
+          <div class="skills-wrap">
+            {% for skill in role.key_skills %}
+            <span class="skill-pill">{{ skill }}</span>
             {% endfor %}
           </div>
         </div>
       </div>
-    </div>
+    </article>
+    {% endfor %}
 
-    <!-- Freelance Branch -->
-    <div class="tree-column freelance-branch">
-      <div class="column-label">Now Freelancing</div>
-      <div class="branch-container">
-        {% for gig in mit.freelance reversed %}
-        <div class="job-card freelance-card">
+    <section class="branch-node">
+      <div class="branch-label">Now Freelancing</div>
+      <div class="freelance-grid">
+        {% for gig in site.data['work-history'].career_tree.freelance %}
+        <article class="job-card freelance-card">
           <div class="card-header">
             <div class="card-title">{{ gig.title }}</div>
-            <div class="card-subtitle">{{ gig.subtitle }}</div>
+            <div class="card-date">{{ gig.start_date }}</div>
           </div>
-          <div class="card-body">
-            <div class="card-org">{{ gig.organization }}</div>
-            <div class="card-date">Since {{ gig.start_date }}</div>
-            <p class="card-description">{{ gig.description }}</p>
-          </div>
-        </div>
+          <div class="card-subtitle">{{ gig.subtitle }}</div>
+          <p class="block-text">{{ gig.description }}</p>
+        </article>
         {% endfor %}
       </div>
-    </div>
+    </section>
   </div>
-
-  <!-- SVG connector lines -->
-  <svg class="tree-lines" width="100%" height="100%" preserveAspectRatio="none">
-    <line class="connector-line" x1="0%" y1="50%" x2="100%" y2="50%"/>
-  </svg>
 </section>
 
 {{ content }}

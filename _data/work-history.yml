@@ -1,49 +1,58 @@
 # Career Tree Structure
 career_tree:
-  # Primary branch: past employment leading to MIT
+  # Vertical trunk (most recent -> oldest)
   past:
-    - title: "Program Associate"
-      subtitle: "AmeriCorps VISTA"
-      organization: "West Contra Costa Public Education Fund"
-      location: "Richmond, CA"
-      start_date: "Aug 2019"
-      end_date: "Aug 2020"
-      description: "Analyzed student data using R for program development and strategic grant writing. Managed $40K mini-grants program."
+    - title: "Consortium on Financing Higher Education (COFHE), MIT"
+      period: "Aug 2022 - Nov 2025"
+      organization_description: "Research consortium of ~30-40 colleges and universities that produces data, surveys, and analysis on higher education finance, enrollment, and student outcomes."
+      my_role: "Led multi-institutional survey projects end-to-end (data collection, analysis, reporting), building ETL pipelines and visualizations in R/SQL/Tableau and translating results into insights for institutional stakeholders."
+      key_skills:
+        - "Data analysis"
+        - "ETL pipelines"
+        - "SQL"
+        - "R"
+        - "Tableau"
+        - "Data visualization"
+        - "Survey research"
+        - "Stakeholder communication"
+        - "Project management"
 
-    - title: "Education Research Analyst"
-      subtitle: "RTI International"
-      organization: "Education and Workforce Development Group"
-      location: "Berkeley, CA"
-      start_date: "Aug 2020"
-      end_date: "Aug 2022"
-      description: "Processed and analyzed educational datasets (~500K records) using R and Stata. Validated ML-generated results for major coding."
+    - title: "RTI International - Education & Workforce Development Group"
+      period: "Aug 2020 - Aug 2022"
+      organization_description: "Global nonprofit research institute conducting large-scale policy research, including federally funded education studies such as NPSAS and HSLS."
+      my_role: "Analyzed and integrated large national datasets (~500k+ records), applied statistical and machine learning validation methods, and supported policy research through data cleaning, coding, and structured data collection."
+      key_skills:
+        - "Statistical analysis"
+        - "R"
+        - "Stata"
+        - "Data integration"
+        - "Data quality assurance"
+        - "Machine learning validation"
+        - "Policy research"
+        - "Data coding"
 
-  # Current branch: MIT (parent) with freelance children
-  current:
-    title: "Research Analyst"
-    subtitle: "MIT"
-    organization: "Consortium on Financing Higher Education"
-    location: "Cambridge, MA"
-    start_date: "Aug 2022"
-    end_date: "Nov 2025"
-    description: "Managed datasets for 39 member institutions. Optimized ETL pipelines, automated data validation, streamlined reporting workflows."
-    highlights:
-      - "39-institution dataset management with SQL, R, Tableau"
-      - "ETL pipeline optimization (Python, SQL)"
-      - "Automated data validation (Python, pandas)"
-      - "Report generation (R, ggplot2, flextable)"
-      - "Major survey project management (SNS, ESS)"
+    - title: "West Contra Costa Public Education Fund (AmeriCorps VISTA)"
+      period: "Aug 2019 - Aug 2020"
+      organization_description: "Nonprofit supporting public schools through fundraising, scholarships, grants, and community programs."
+      my_role: "Managed scholarship and grant programs (~$40K+), supported fundraising and grant writing with data and storytelling, and handled outreach, communications, and program coordination."
+      key_skills:
+        - "Program management"
+        - "Grant writing"
+        - "Fundraising"
+        - "Data analysis"
+        - "Communications"
+        - "Stakeholder engagement"
+        - "Event coordination"
+        - "CRM tools"
 
-    # Freelance children branching from MIT
-    freelance:
-      - title: "Research Analyst"
-        subtitle: "Smith College"
-        organization: "Smith College"
-        start_date: "Jan 2025"
-        description: "Ongoing research and analysis work"
+  # Branching from the trunk into current freelance work
+  freelance:
+    - title: "Research Analyst"
+      subtitle: "Smith College"
+      start_date: "Current"
+      description: "Ongoing research and analysis work."
 
-      - title: "Business Analyst"
-        subtitle: "Q3Labs"
-        organization: "Q3Labs"
-        start_date: "Jan 2025"
-        description: "Business analysis and strategy"
+    - title: "Business Analyst"
+      subtitle: "Q3Labs"
+      start_date: "Current"
+      description: "Business analysis and strategy."
