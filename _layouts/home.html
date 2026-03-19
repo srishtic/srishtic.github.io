@@ -4,40 +4,6 @@ layout: default
 
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
 
-<!-- Top Section: 3 columns with image links -->
-<section class="top-section">
-  <div class="image-grid">
-
-    <div class="image-item">
-      <a href="{{ site.data.currently.listening.url }}" class="image-link">
-        <div class="image-frame">
-          <img src="{{ site.data.currently.listening.image }}" alt="{{ site.data.currently.listening.title }}">
-        </div>
-        <span class="image-label">currently listening</span>
-      </a>
-    </div>
-
-    <div class="image-item">
-      <a href="{{ site.data.currently.reading.url }}" class="image-link">
-        <div class="image-frame">
-          <img src="{{ site.data.currently.reading.image }}" alt="{{ site.data.currently.reading.title }}">
-        </div>
-        <span class="image-label">currently reading</span>
-      </a>
-    </div>
-
-    <div class="image-item">
-      <a href="{{ site.data.currently.spotlight.url }}" class="image-link">
-        <div class="image-frame">
-          <img src="{{ site.data.currently.spotlight.image }}" alt="{{ site.data.currently.spotlight.title }}">
-        </div>
-        <span class="image-label">project spotlight</span>
-      </a>
-    </div>
-
-  </div>
-</section>
-
 <!-- Career Tree Section -->
 <section class="career-tree-section">
   <h2 class="tree-title">Career Path</h2>
@@ -46,7 +12,7 @@ layout: default
     <!-- Past Roles Column -->
     <div class="tree-column past-roles">
       <div class="column-label">Background</div>
-      {% for role in site.data.work-history.career_tree.past %}
+      {% for role in site.data['work-history'].career_tree.past reversed %}
       <div class="job-card">
         <div class="card-header">
           <div class="card-title">{{ role.title }}</div>
@@ -65,7 +31,7 @@ layout: default
     <!-- MIT Hub -->
     <div class="tree-column mit-hub">
       <div class="column-label">Current (transitioned)</div>
-      {% assign mit = site.data.work-history.career_tree.current %}
+      {% assign mit = site.data['work-history'].career_tree.current %}
       <div class="job-card mit-card">
         <div class="card-header">
           <div class="card-title">{{ mit.title }}</div>
@@ -89,7 +55,7 @@ layout: default
     <div class="tree-column freelance-branch">
       <div class="column-label">Now Freelancing</div>
       <div class="branch-container">
-        {% for gig in mit.freelance %}
+        {% for gig in mit.freelance reversed %}
         <div class="job-card freelance-card">
           <div class="card-header">
             <div class="card-title">{{ gig.title }}</div>
