@@ -2,6 +2,7 @@
 layout: default
 title: South Indian Inscription Interface
 status: in progress
+summary: Data/interface project to make South Indian inscriptions easier to explore geographically, historically, and thematically by reorganizing and visualizing inscription records.
 ---
 
 # Inscription Interface

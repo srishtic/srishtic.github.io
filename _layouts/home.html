@@ -7,10 +7,12 @@ layout: default
 <section class="tabbed-home">
   <input type="radio" name="home-tab" id="tab-employment" class="tab-input" checked>
   <input type="radio" name="home-tab" id="tab-projects" class="tab-input">
+  <input type="radio" name="home-tab" id="tab-education" class="tab-input">
 
   <div class="tab-controls" role="tablist" aria-label="Home sections">
     <label for="tab-employment" role="tab" class="tab-control">Employment</label>
     <label for="tab-projects" role="tab" class="tab-control">Projects</label>
+    <label for="tab-education" role="tab" class="tab-control">Education</label>
   </div>
 
   <div class="tab-panel panel-employment">
@@ -124,6 +126,7 @@ layout: default
 
   <div class="tab-panel panel-projects">
     <section class="projects-section">
+      {% if site.projects and site.projects.size > 0 %}
       <div class="projects-grid">
         {% assign sorted_projects = site.projects | sort: 'title' %}
         {% for project in sorted_projects %}
@@ -132,11 +135,49 @@ layout: default
           {% if project.status %}
           <div class="project-card-meta">{{ project.status }}</div>
           {% endif %}
+          {% if project.summary %}
+          <p class="project-card-text">{{ project.summary }}</p>
+          {% else %}
           <p class="project-card-text">{{ project.content | strip_html | truncate: 190 }}</p>
+          {% endif %}
           <a class="project-card-link" href="{{ project.url | relative_url }}">View project</a>
         </article>
         {% endfor %}
       </div>
+      {% else %}
+      <p class="projects-empty">No project cards found yet. Add markdown files under _projects with front matter to populate this tab.</p>
+      {% endif %}
+    </section>
+  </div>
+
+  <div class="tab-panel panel-education">
+    <section class="education-section">
+      {% assign education_items = site.data['work-history'].education %}
+      {% if education_items and education_items.size > 0 %}
+      <div class="education-timeline">
+        {% for item in education_items %}
+        <article class="education-node">
+          <div class="education-card">
+            <div class="education-card-title">{{ item.institution }}</div>
+            {% if item.department %}
+            <div class="education-card-subtitle">{{ item.department }}</div>
+            {% endif %}
+            {% if item.program %}
+            <div class="education-card-program">{{ item.program }}</div>
+            {% endif %}
+            {% if item.period %}
+            <div class="education-card-date">{{ item.period }}</div>
+            {% endif %}
+            {% if item.description %}
+            <p class="education-card-text">{{ item.description }}</p>
+            {% endif %}
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+      {% else %}
+      <p class="education-empty">Add entries under education in work-history.yml to populate this timeline.</p>
+      {% endif %}
     </section>
   </div>
 </section>
