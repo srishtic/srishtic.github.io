@@ -38,55 +38,78 @@ layout: default
   </div>
 </section>
 
-<!-- Work History Timeline Section -->
-<section class="timeline-section">
-  <h2 class="timeline-header">Work History</h2>
-  <div class="timeline-container">
-    {% for job in site.data.work-history.employment %}
-    <div class="timeline-item {% if job.current %}current{% endif %}">
-      <div class="timeline-content">
-        <div class="timeline-item-title">{{ job.title }}</div>
-        <div class="timeline-item-meta">{{ job.organization }}</div>
-        <div class="timeline-item-meta">{{ job.location }}</div>
-        <div class="timeline-item-date">{{ job.start_date }} – {{ job.end_date }}</div>
-        {% if job.highlights %}
-        <ul class="timeline-item-highlights">
-          {% for highlight in job.highlights limit: 4 %}
-          <li>{{ highlight }}</li>
-          {% endfor %}
-        </ul>
-        {% endif %}
+<!-- Career Tree Section -->
+<section class="career-tree-section">
+  <h2 class="tree-title">Career Path</h2>
+  
+  <div class="tree-container">
+    <!-- Past Roles Column -->
+    <div class="tree-column past-roles">
+      <div class="column-label">Background</div>
+      {% for role in site.data.work-history.career_tree.past %}
+      <div class="job-card">
+        <div class="card-header">
+          <div class="card-title">{{ role.title }}</div>
+          <div class="card-subtitle">{{ role.subtitle }}</div>
+        </div>
+        <div class="card-body">
+          <div class="card-org">{{ role.organization }}</div>
+          <div class="card-location">{{ role.location }}</div>
+          <div class="card-date">{{ role.start_date }} – {{ role.end_date }}</div>
+          <p class="card-description">{{ role.description }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <!-- MIT Hub -->
+    <div class="tree-column mit-hub">
+      <div class="column-label">Current (transitioned)</div>
+      {% assign mit = site.data.work-history.career_tree.current %}
+      <div class="job-card mit-card">
+        <div class="card-header">
+          <div class="card-title">{{ mit.title }}</div>
+          <div class="card-subtitle">{{ mit.subtitle }}</div>
+        </div>
+        <div class="card-body">
+          <div class="card-org">{{ mit.organization }}</div>
+          <div class="card-location">{{ mit.location }}</div>
+          <div class="card-date">{{ mit.start_date }} – {{ mit.end_date }}</div>
+          <p class="card-description">{{ mit.description }}</p>
+          <div class="card-highlights">
+            {% for highlight in mit.highlights %}
+            <div class="highlight-item">{{ highlight }}</div>
+            {% endfor %}
+          </div>
+        </div>
       </div>
     </div>
-    {% endfor %}
-  </div>
-</section>
 
-<!-- Freelance Work Section -->
-<section class="freelance-section">
-  <h2 class="freelance-header">Freelance Work</h2>
-  <div class="freelance-grid">
-    {% for project in site.data.work-history.freelance %}
-    <div class="freelance-card {% if project.current %}current{% endif %}">
-      <h4>{{ project.title }}</h4>
-      <div class="organization">{{ project.organization }}</div>
-      <p>{{ project.description }}</p>
+    <!-- Freelance Branch -->
+    <div class="tree-column freelance-branch">
+      <div class="column-label">Now Freelancing</div>
+      <div class="branch-container">
+        {% for gig in mit.freelance %}
+        <div class="job-card freelance-card">
+          <div class="card-header">
+            <div class="card-title">{{ gig.title }}</div>
+            <div class="card-subtitle">{{ gig.subtitle }}</div>
+          </div>
+          <div class="card-body">
+            <div class="card-org">{{ gig.organization }}</div>
+            <div class="card-date">Since {{ gig.start_date }}</div>
+            <p class="card-description">{{ gig.description }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
     </div>
-    {% endfor %}
   </div>
-</section>
 
-<!-- Non-Work Projects Section -->
-<section class="projects-section">
-  <h2 class="projects-header">Non-Work Projects</h2>
-  <div class="projects-list">
-    <div class="project-item">
-      <a href="/projects/masters-dissertation/">Master's Dissertation: Global History</a>
-    </div>
-    <div class="project-item">
-      <a href="/projects/inscription-interface/">South Indian Inscription Interface</a>
-    </div>
-  </div>
+  <!-- SVG connector lines -->
+  <svg class="tree-lines" width="100%" height="100%" preserveAspectRatio="none">
+    <line class="connector-line" x1="0%" y1="50%" x2="100%" y2="50%"/>
+  </svg>
 </section>
 
 {{ content }}
