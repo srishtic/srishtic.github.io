@@ -15,7 +15,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 body {
-  background-color: var(--light-sage);
+  background-color: var(--cream);
   color: var(--text);
   font-family: 'DM Sans', 'Helvetica Neue', sans-serif;
   font-weight: 300;
@@ -195,6 +195,7 @@ h1, h2, h3, h4, h5, h6 {
 .branch-node {
   position: relative;
   margin-top: 1.8rem;
+  margin-bottom: 1.9rem;
   padding-top: 0.4rem;
 }
 
@@ -209,7 +210,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .branch-label {
-  margin: 0 0 0.8rem;
+  margin: 0 0 1rem;
   font-size: 0.74rem;
   letter-spacing: 0.1em;
   text-transform: uppercase;

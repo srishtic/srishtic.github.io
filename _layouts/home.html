@@ -7,8 +7,7 @@ layout: default
 <!-- Career Tree Section -->
 <section class="career-tree-section">
   <div class="vertical-tree">
-    <section class="branch-node">
-      <div class="branch-label">Now Freelancing</div>
+    <section class="freelance-node">
       <div class="freelance-grid">
         {% for gig in site.data['work-history'].career_tree.freelance %}
         <article class="job-card freelance-card">
@@ -46,9 +45,43 @@ layout: default
       </div>
     </section>
 
-    {% for role in site.data['work-history'].career_tree.past %}
+    <section class="branch-node">
+      <div class="branch-label">Transition to Freelance Work</div>
+    </section>
+
+    {% assign first_role = site.data['work-history'].career_tree.past | first %}
     <article class="timeline-node">
-      <div class="job-card trunk-card role-{{ forloop.index }}">
+      <div class="job-card trunk-card role-1">
+        <div class="card-header">
+          <div class="card-title">{{ first_role.organization }}</div>
+          <div class="card-department">{{ first_role.department }}</div>
+          <div class="card-role">{{ first_role.title }}</div>
+          <div class="card-date">{{ first_role.period }}</div>
+        </div>
+
+        <div class="card-details">
+          <div class="card-block">
+            <p class="block-text">{{ first_role.organization_description }}</p>
+          </div>
+
+          <div class="card-block">
+            <p class="block-text">{{ first_role.my_role }}</p>
+          </div>
+
+          <div class="card-block">
+            <div class="skills-wrap">
+              {% for skill in first_role.key_skills %}
+              <span class="skill-pill">{{ skill }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    {% for role in site.data['work-history'].career_tree.past offset:1 %}
+    <article class="timeline-node">
+      <div class="job-card trunk-card role-{{ forloop.index | plus: 1 }}">
         <div class="card-header">
           <div class="card-title">{{ role.organization }}</div>
           <div class="card-department">{{ role.department }}</div>
