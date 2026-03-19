@@ -32,6 +32,55 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
+/* ── Home Tabs ───────────────────────────────────────────── */
+.tabbed-home {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.tab-input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.tab-controls {
+  display: inline-flex;
+  gap: 0.35rem;
+  padding: 0.3rem;
+  border: 1px solid var(--sage);
+  border-radius: 999px;
+  background-color: rgba(233, 237, 201, 0.5);
+  margin: 0.2rem 0 1.2rem;
+}
+
+.tab-control {
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-weight: 600;
+  padding: 0.45rem 0.85rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#tab-employment:checked ~ .tab-controls label[for="tab-employment"],
+#tab-projects:checked ~ .tab-controls label[for="tab-projects"] {
+  background-color: var(--cream);
+  color: var(--text);
+}
+
+.tab-panel {
+  display: none;
+}
+
+#tab-employment:checked ~ .panel-employment,
+#tab-projects:checked ~ .panel-projects {
+  display: block;
+}
+
 /* ── Career Tree Section ─────────────────────────────────── */
 .career-tree-section {
   margin: 0.5rem 0 2rem;
@@ -232,6 +281,67 @@ h1, h2, h3, h4, h5, h6 {
   border-color: #b07f66;
 }
 
+/* ── Projects List ───────────────────────────────────────── */
+.projects-section {
+  margin: 0.5rem 0 2rem;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.project-card {
+  background-color: var(--light-sage);
+  border: 1.5px solid var(--sage);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  transition: border-color 0.25s ease, transform 0.25s ease;
+}
+
+.project-card:hover {
+  border-color: var(--tan);
+  transform: translateY(-2px);
+}
+
+.project-card-title {
+  font-size: 0.98rem;
+  color: var(--text);
+  font-weight: 600;
+  margin-bottom: 0.35rem;
+}
+
+.project-card-meta {
+  display: inline-block;
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--sage);
+  border-radius: 999px;
+  padding: 0.12rem 0.5rem;
+  margin-bottom: 0.6rem;
+}
+
+.project-card-text {
+  margin: 0 0 0.75rem;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+
+.project-card-link {
+  font-size: 0.82rem;
+  color: var(--tan);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.project-card-link:hover {
+  color: var(--text);
+}
+
 @media (hover: none) {
   .card-details {
     opacity: 1;
@@ -246,6 +356,10 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .freelance-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-grid {
     grid-template-columns: 1fr;
   }
 }
