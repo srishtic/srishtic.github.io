@@ -2,8 +2,9 @@
 career_tree:
   # Vertical trunk (most recent -> oldest)
   past:
-    - title: "Consortium on Financing Higher Education (COFHE), MIT"
+    - organization: "Consortium on Financing Higher Education (COFHE), MIT"
       period: "Aug 2022 - Nov 2025"
+      title: "Research Analyst"
       organization_description: "Research consortium of ~30-40 colleges and universities that produces data, surveys, and analysis on higher education finance, enrollment, and student outcomes."
       my_role: "Led multi-institutional survey projects end-to-end (data collection, analysis, reporting), building ETL pipelines and visualizations in R/SQL/Tableau and translating results into insights for institutional stakeholders."
       key_skills:
@@ -17,8 +18,9 @@ career_tree:
         - "Stakeholder communication"
         - "Project management"
 
-    - title: "RTI International - Education & Workforce Development Group"
+    - organization: "RTI International - Education & Workforce Development Group"
       period: "Aug 2020 - Aug 2022"
+      title: "Education Analyst"
       organization_description: "Global nonprofit research institute conducting large-scale policy research, including federally funded education studies such as NPSAS and HSLS."
       my_role: "Analyzed and integrated large national datasets (~500k+ records), applied statistical and machine learning validation methods, and supported policy research through data cleaning, coding, and structured data collection."
       key_skills:
@@ -31,8 +33,9 @@ career_tree:
         - "Policy research"
         - "Data coding"
 
-    - title: "West Contra Costa Public Education Fund (AmeriCorps VISTA)"
+    - organization: "West Contra Costa Public Education Fund (AmeriCorps VISTA)"
       period: "Aug 2019 - Aug 2020"
+      title: "Program Associate (AmeriCorps VISTA)"
       organization_description: "Nonprofit supporting public schools through fundraising, scholarships, grants, and community programs."
       my_role: "Managed scholarship and grant programs (~$40K+), supported fundraising and grant writing with data and storytelling, and handled outreach, communications, and program coordination."
       key_skills:

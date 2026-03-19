@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Job Cards */
 .job-card {
-  background-color: var(--cream);
+  background-color: var(--light-sage);
   border: 1.5px solid var(--sage);
   border-radius: 12px;
   padding: 1.25rem;
@@ -122,9 +122,9 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 0.25rem 0;
 }
 
-.card-subtitle {
-  font-size: 0.82rem;
-  color: var(--tan);
+.card-role {
+  font-size: 0.84rem;
+  color: var(--muted);
   font-weight: 500;
   margin: 0 0 0.45rem;
 }
@@ -141,21 +141,24 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 0.85rem;
 }
 
-.block-label {
-  margin: 0 0 0.25rem;
-  font-family: 'DM Sans', 'Helvetica Neue', sans-serif;
-  font-size: 0.74rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-  font-weight: 600;
-}
-
 .block-text {
   margin: 0;
   font-size: 0.9rem;
   line-height: 1.55;
   color: var(--text);
+}
+
+.card-details {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.25s ease, max-height 0.35s ease;
+}
+
+.job-card:hover .card-details,
+.job-card:focus-within .card-details {
+  opacity: 1;
+  max-height: 460px;
 }
 
 .skills-wrap {
@@ -166,12 +169,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .skill-pill {
   display: inline-block;
-  border: 1px solid var(--light-sage);
+  border: 1px solid var(--sage);
   border-radius: 999px;
   padding: 0.22rem 0.55rem;
   font-size: 0.78rem;
   color: var(--text);
-  background-color: rgba(233, 237, 201, 0.35);
+  background-color: var(--cream);
 }
 
 .trunk-card.role-1 { border-color: var(--tan); }
@@ -211,6 +214,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .freelance-card {
   border-color: var(--tan);
+}
+
+@media (hover: none) {
+  .card-details {
+    opacity: 1;
+    max-height: 500px;
+  }
 }
 
 /* ── Responsive ──────────────────────────────────────────── */

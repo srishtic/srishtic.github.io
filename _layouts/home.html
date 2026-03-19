@@ -11,26 +11,26 @@ layout: default
     <article class="timeline-node">
       <div class="job-card trunk-card role-{{ forloop.index }}">
         <div class="card-header">
-          <div class="card-title">{{ role.title }}</div>
+          <div class="card-title">{{ role.organization }}</div>
+          <div class="card-role">{{ role.title }}</div>
           <div class="card-date">{{ role.period }}</div>
         </div>
 
-        <div class="card-block">
-          <h3 class="block-label">Organization</h3>
+        <div class="card-details">
+          <div class="card-block">
           <p class="block-text">{{ role.organization_description }}</p>
-        </div>
+          </div>
 
-        <div class="card-block">
-          <h3 class="block-label">My Role</h3>
+          <div class="card-block">
           <p class="block-text">{{ role.my_role }}</p>
-        </div>
+          </div>
 
-        <div class="card-block">
-          <h3 class="block-label">Key Skills</h3>
+          <div class="card-block">
           <div class="skills-wrap">
             {% for skill in role.key_skills %}
             <span class="skill-pill">{{ skill }}</span>
             {% endfor %}
+          </div>
           </div>
         </div>
       </div>
@@ -43,11 +43,13 @@ layout: default
         {% for gig in site.data['work-history'].career_tree.freelance %}
         <article class="job-card freelance-card">
           <div class="card-header">
-            <div class="card-title">{{ gig.title }}</div>
+            <div class="card-title">{{ gig.subtitle }}</div>
+            <div class="card-role">{{ gig.title }}</div>
             <div class="card-date">{{ gig.start_date }}</div>
           </div>
-          <div class="card-subtitle">{{ gig.subtitle }}</div>
-          <p class="block-text">{{ gig.description }}</p>
+          <div class="card-details">
+            <p class="block-text">{{ gig.description }}</p>
+          </div>
         </article>
         {% endfor %}
       </div>
