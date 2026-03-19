@@ -2,10 +2,11 @@
 career_tree:
   # Vertical trunk (most recent -> oldest)
   past:
-    - organization: "Consortium on Financing Higher Education (COFHE), MIT"
+    - organization: "MIT"
+      department: "Consortium on Financing Higher Education (COFHE)"
       period: "Aug 2022 - Nov 2025"
       title: "Research Analyst"
-      organization_description: "Research consortium of ~30-40 colleges and universities that produces data, surveys, and analysis on higher education finance, enrollment, and student outcomes."
+      organization_description: "Research consortium of ~30-40 colleges and universities that produced data, surveys, and analysis on higher education finance, enrollment, and student outcomes."
       my_role: "Led multi-institutional survey projects end-to-end (data collection, analysis, reporting), building ETL pipelines and visualizations in R/SQL/Tableau and translating results into insights for institutional stakeholders."
       key_skills:
         - "Data analysis"
@@ -18,7 +19,8 @@ career_tree:
         - "Stakeholder communication"
         - "Project management"
 
-    - organization: "RTI International - Education & Workforce Development Group"
+    - organization: "RTI International"
+      department: "Education & Workforce Development Group"
       period: "Aug 2020 - Aug 2022"
       title: "Education Analyst"
       organization_description: "Global nonprofit research institute conducting large-scale policy research, including federally funded education studies such as NPSAS and HSLS."
@@ -33,9 +35,10 @@ career_tree:
         - "Policy research"
         - "Data coding"
 
-    - organization: "West Contra Costa Public Education Fund (AmeriCorps VISTA)"
+    - organization: "West Contra Costa Public Education Fund"
+      department: "AmeriCorps VISTA"
       period: "Aug 2019 - Aug 2020"
-      title: "Program Associate (AmeriCorps VISTA)"
+      title: "Program Associate"
       organization_description: "Nonprofit supporting public schools through fundraising, scholarships, grants, and community programs."
       my_role: "Managed scholarship and grant programs (~$40K+), supported fundraising and grant writing with data and storytelling, and handled outreach, communications, and program coordination."
       key_skills:
@@ -50,12 +53,28 @@ career_tree:
 
   # Branching from the trunk into current freelance work
   freelance:
-    - title: "Research Analyst"
-      subtitle: "Smith College"
-      start_date: "Current"
-      description: "Ongoing research and analysis work."
+    - organization: "Smith College"
+      department: "Office of Institutional Research"
+      period: "Current"
+      title: "Research Analyst"
+      organization_description: "Institutional Research (IR) office at a women's liberal arts college, responsible for managing, analyzing, and reporting institutional data to support decision-making, planning, and external reporting."
+      my_role: "Supported preparation of the 2026 ACTS submission by combining data from multiple sources, cleaning and standardizing datasets, and running validation checks using R."
+      key_skills:
+        - "R"
+        - "Data integration"
+        - "Data cleaning"
+        - "Validation checks"
+        - "Institutional research"
+        - "Data reporting"
 
-    - title: "Business Analyst"
-      subtitle: "Q3Labs"
-      start_date: "Current"
-      description: "Business analysis and strategy."
+    - organization: "Q3Labs"
+      department: "Business Analysis & AI Solutions"
+      period: "Current"
+      title: "Business Analyst"
+      organization_description: "Company building AI tools and solutions for business applications."
+      my_role: "Assisted with client business process reviews, conducted research on client operations and use cases, and supported development of insights and recommendations."
+      key_skills:
+        - "Business analysis"
+        - "Process mapping"
+        - "Client research"
+        - "AI applications"

@@ -7,11 +7,51 @@ layout: default
 <!-- Career Tree Section -->
 <section class="career-tree-section">
   <div class="vertical-tree">
+    <section class="branch-node">
+      <div class="branch-label">Now Freelancing</div>
+      <div class="freelance-grid">
+        {% for gig in site.data['work-history'].career_tree.freelance %}
+        <article class="job-card freelance-card">
+          <div class="card-header">
+            <div class="card-title">{{ gig.organization }}</div>
+            <div class="card-department">{{ gig.department }}</div>
+            <div class="card-role">{{ gig.title }}</div>
+            <div class="card-date">{{ gig.period }}</div>
+          </div>
+          <div class="card-details">
+            {% if gig.organization_description %}
+            <div class="card-block">
+              <p class="block-text">{{ gig.organization_description }}</p>
+            </div>
+            {% endif %}
+
+            {% if gig.my_role %}
+            <div class="card-block">
+              <p class="block-text">{{ gig.my_role }}</p>
+            </div>
+            {% endif %}
+
+            {% if gig.key_skills %}
+            <div class="card-block">
+              <div class="skills-wrap">
+                {% for skill in gig.key_skills %}
+                <span class="skill-pill">{{ skill }}</span>
+                {% endfor %}
+              </div>
+            </div>
+            {% endif %}
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </section>
+
     {% for role in site.data['work-history'].career_tree.past %}
     <article class="timeline-node">
       <div class="job-card trunk-card role-{{ forloop.index }}">
         <div class="card-header">
           <div class="card-title">{{ role.organization }}</div>
+          <div class="card-department">{{ role.department }}</div>
           <div class="card-role">{{ role.title }}</div>
           <div class="card-date">{{ role.period }}</div>
         </div>
@@ -36,24 +76,6 @@ layout: default
       </div>
     </article>
     {% endfor %}
-
-    <section class="branch-node">
-      <div class="branch-label">Now Freelancing</div>
-      <div class="freelance-grid">
-        {% for gig in site.data['work-history'].career_tree.freelance %}
-        <article class="job-card freelance-card">
-          <div class="card-header">
-            <div class="card-title">{{ gig.subtitle }}</div>
-            <div class="card-role">{{ gig.title }}</div>
-            <div class="card-date">{{ gig.start_date }}</div>
-          </div>
-          <div class="card-details">
-            <p class="block-text">{{ gig.description }}</p>
-          </div>
-        </article>
-        {% endfor %}
-      </div>
-    </section>
   </div>
 </section>
 

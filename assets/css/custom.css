@@ -15,7 +15,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 body {
-  background-color: var(--cream);
+  background-color: var(--light-sage);
   color: var(--text);
   font-family: 'DM Sans', 'Helvetica Neue', sans-serif;
   font-weight: 300;
@@ -76,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Job Cards */
 .job-card {
   background-color: var(--light-sage);
-  border: 1.5px solid var(--sage);
+  border: 1.5px solid #b8c48f;
   border-radius: 12px;
   padding: 1.25rem;
   cursor: default;
@@ -110,9 +110,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-header {
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.55rem;
   border-bottom: 1px solid #f5f5f5;
-  padding-bottom: 0.75rem;
+  padding-bottom: 0.45rem;
 }
 
 .card-title {
@@ -120,6 +120,13 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   color: var(--text);
   margin: 0 0 0.25rem 0;
+}
+
+.card-department {
+  font-size: 0.78rem;
+  color: var(--tan);
+  font-weight: 500;
+  margin: 0 0 0.3rem;
 }
 
 .card-role {
@@ -138,7 +145,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card-block {
-  margin-top: 0.85rem;
+  margin-top: 0.45rem;
+}
+
+.card-details .card-block:first-child {
+  margin-top: 0.15rem;
 }
 
 .block-text {
@@ -177,9 +188,9 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--cream);
 }
 
-.trunk-card.role-1 { border-color: var(--tan); }
-.trunk-card.role-2 { border-color: var(--sage); }
-.trunk-card.role-3 { border-color: var(--light-sage); }
+.trunk-card.role-1 { border-color: #c98f5e; }
+.trunk-card.role-2 { border-color: #8ea77a; }
+.trunk-card.role-3 { border-color: #6f9ea1; }
 
 .branch-node {
   position: relative;
@@ -213,7 +224,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .freelance-card {
-  border-color: var(--tan);
+  border-color: #9a7ab3;
+}
+
+.freelance-card:nth-child(2) {
+  border-color: #b07f66;
 }
 
 @media (hover: none) {
