@@ -2,7 +2,7 @@
 layout: default
 title: Master's Dissertation: Global History
 status: in progress
-summary: Historical research project on the Sringeri Matha in Karnataka, India circa 1200-1500 AD. 
+summary: Historical research project on the Sringeri Matha in Karnataka, India (c. 1200-1500), exploring Advaita Vedanta as lived philosophy through texts, inscriptions, and institutional history.
 ---
 
 # Master's Dissertation

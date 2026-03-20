@@ -458,7 +458,9 @@ h1, h2, h3, h4, h5, h6 {
 
 .education-type-degree {
   border-color: #c98f5e;
-  box-shadow: inset 0 0 0 1px rgba(201, 143, 94, 0.18);
+  border-width: 2px;
+  background-color: rgba(250, 237, 205, 0.55);
+  box-shadow: inset 4px 0 0 rgba(201, 143, 94, 0.45);
 }
 
 .education-type-degree .education-type-badge {
@@ -469,10 +471,29 @@ h1, h2, h3, h4, h5, h6 {
 
 .education-type-course {
   border-color: #8ea77a;
+  padding: 0.72rem 0.85rem;
 }
 
 .education-type-school {
   border-color: #6f9ea1;
+}
+
+.education-type-course .education-card-title {
+  font-size: 0.92rem;
+}
+
+.education-type-course .education-card-program {
+  margin-bottom: 0.2rem;
+}
+
+.education-type-course .education-card-date {
+  margin-bottom: 0.2rem;
+}
+
+/* Hide repeated site name in footer while keeping footer spacing */
+.site-footer .footer-col-1,
+.site-footer .site-title {
+  display: none;
 }
 
 .education-card:hover {

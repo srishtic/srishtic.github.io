@@ -9,6 +9,5 @@ collections:
 header_pages:
   - index.md
   - projects/index.md
-  - writing/index.md
   - about.md
   - contact.md
