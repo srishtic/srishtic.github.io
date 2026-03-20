@@ -328,6 +328,8 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.98rem;
   color: var(--text);
   font-weight: 600;
+  line-height: 1.35;
+  min-height: 2.65rem;
   margin-bottom: 0.35rem;
 }
 
@@ -441,6 +443,7 @@ h1, h2, h3, h4, h5, h6 {
   border: 1.5px solid #8ea77a;
   border-radius: 12px;
   padding: 1rem 1.1rem;
+  min-height: 145px;
   transition: border-color 0.25s ease, transform 0.25s ease;
 }
 
@@ -471,7 +474,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .education-type-course {
   border-color: #8ea77a;
-  padding: 0.72rem 0.85rem;
+  width: 86%;
 }
 
 .education-type-school {
@@ -483,16 +486,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .education-type-course .education-card-program {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.35rem;
 }
 
 .education-type-course .education-card-date {
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.5rem;
 }
 
 /* Hide repeated site name in footer while keeping footer spacing */
 .site-footer .footer-col-1,
-.site-footer .site-title {
+.site-footer .site-title,
+.site-footer .footer-heading,
+.site-footer h2 {
   display: none;
 }
 
@@ -533,6 +538,11 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.86rem;
   line-height: 1.5;
   color: var(--text);
+}
+
+.education-type-degree,
+.education-type-school {
+  width: 100%;
 }
 
 .education-empty {
@@ -619,5 +629,11 @@ h1, h2, h3, h4, h5, h6 {
 
   .education-node::before {
     left: -1.22rem;
+  }
+
+  .education-type-course,
+  .education-type-degree,
+  .education-type-school {
+    width: 100%;
   }
 }
