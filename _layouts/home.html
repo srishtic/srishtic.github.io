@@ -155,28 +155,78 @@ layout: default
       {% assign education_items = site.data['work-history'].education %}
       {% if education_items and education_items.size > 0 %}
       <div class="education-timeline">
-        {% for item in education_items %}
-        <article class="education-node">
-          <div class="education-card education-type-{{ item.type | default: 'course' }}">
-            {% if item.type %}
-            <div class="education-type-badge">{{ item.type }}</div>
-            {% endif %}
-            <div class="education-card-title">{{ item.institution }}</div>
-            {% if item.department %}
-            <div class="education-card-subtitle">{{ item.department }}</div>
-            {% endif %}
-            {% if item.program %}
-            <div class="education-card-program">{{ item.program }}</div>
-            {% endif %}
-            {% if item.period %}
-            <div class="education-card-date">{{ item.period }}</div>
-            {% endif %}
-            {% if item.description %}
-            <p class="education-card-text">{{ item.description }}</p>
-            {% endif %}
+        <div class="education-degrees">
+          <div class="education-section-heading">Degrees</div>
+          <div class="education-grid">
+            {% for item in education_items %}
+              {% if item.type == 'degree' %}
+              <article class="education-node">
+                <div class="education-card education-type-{{ item.type }}">
+                  {% if item.program %}
+                  <div class="education-card-title">{{ item.program }}</div>
+                  {% endif %}
+                  {% if item.institution %}
+                  <div class="education-card-subtitle">{{ item.institution }}</div>
+                  {% endif %}
+                  {% if item.department %}
+                  <div class="education-card-program">{{ item.department }}</div>
+                  {% endif %}
+                  {% if item.period %}
+                  <div class="education-card-date">{{ item.period }}</div>
+                  {% endif %}
+                  {% if item.description %}
+                  <p class="education-card-text">{{ item.description }}</p>
+                  {% endif %}
+                  {% if item.themes %}
+                  <div class="card-block">
+                    <div class="skills-wrap">
+                      {% for t in item.themes %}
+                      <span class="education-pill">{{ t }}</span>
+                      {% endfor %}
+                    </div>
+                  </div>
+                  {% endif %}
+                </div>
+              </article>
+              {% endif %}
+            {% endfor %}
           </div>
-        </article>
-        {% endfor %}
+        </div>
+
+        <div class="education-courses">
+          <div class="education-section-heading">Courses &amp; Certificates</div>
+          <div class="education-grid courses-grid">
+            {% for item in education_items %}
+              {% if item.type != 'degree' %}
+              <article class="education-node">
+                <div class="education-card education-type-{{ item.type }}">
+                  {% if item.program %}
+                  <div class="education-card-title">{{ item.program }}</div>
+                  {% endif %}
+                  {% if item.institution %}
+                  <div class="education-card-subtitle">{{ item.institution }}</div>
+                  {% endif %}
+                  {% if item.period %}
+                  <div class="education-card-date">{{ item.period }}</div>
+                  {% endif %}
+                  {% if item.description %}
+                  <p class="education-card-text">{{ item.description }}</p>
+                  {% endif %}
+                  {% if item.themes %}
+                  <div class="card-block">
+                    <div class="skills-wrap">
+                      {% for t in item.themes %}
+                      <span class="education-pill">{{ t }}</span>
+                      {% endfor %}
+                    </div>
+                  </div>
+                  {% endif %}
+                </div>
+              </article>
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
       </div>
       {% else %}
       <p class="education-empty">Add entries under education in work-history.yml to populate this timeline.</p>

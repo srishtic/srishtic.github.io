@@ -471,12 +471,12 @@ h1, h2, h3, h4, h5, h6 {
   border-width: 2px;
   background-color: rgba(250, 237, 205, 0.55);
   box-shadow: inset 4px 0 0 rgba(201, 143, 94, 0.45);
-}
-
-.education-type-degree .education-type-badge {
-  border-color: #c98f5e;
-  color: #7a5538;
-  background-color: rgba(212, 163, 115, 0.12);
+  background-color: var(--light-sage);
+  border: 1.5px solid var(--sage);
+  border-radius: 12px;
+  padding: 1rem 1.1rem;
+  min-height: 120px;
+  transition: border-color 0.25s ease, transform 0.25s ease;
 }
 
  .education-type-course {
@@ -492,30 +492,52 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 0.92rem;
 }
 
-.education-type-course .education-card-program {
-  margin-bottom: 0.35rem;
-}
-
+  border-color: var(--tan);
+  border-width: 2px;
+  background-color: rgba(247,247,242,0.9);
+  box-shadow: 0 4px 12px rgba(18,17,19,0.04);
 .education-type-course .education-card-date {
   margin-bottom: 0.5rem;
 }
-
-/* Hide repeated site name in footer while keeping footer spacing */
+  border-color: var(--sage);
+  width: 72%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--cream);
+}
 .site-footer .footer-col-1,
 .site-footer .site-title,
 .site-footer .footer-heading,
+  margin-bottom: 1rem;
 .site-footer h2 {
   display: none;
 }
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: var(--muted);
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 
 .education-card:hover {
   border-color: var(--tan);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 0.9rem;
   transform: translateY(-2px);
 }
 
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 .education-card-title {
   font-size: 0.98rem;
   font-weight: 600;
+  display: inline-block;
+  border: 1px solid var(--sage);
+  border-radius: 999px;
+  padding: 0.22rem 0.55rem;
+  font-size: 0.78rem;
+  color: var(--text);
+  background-color: var(--cream);
   color: var(--text);
   margin-bottom: 0.25rem;
 }
