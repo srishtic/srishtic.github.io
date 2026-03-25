@@ -2,13 +2,13 @@
 
 /* ── Palette ─────────────────────────────────────────────── */
 :root {
-  --sage:       #CCD5AE;
-  --light-sage: #E9EDC9;
-  --cream:      #FEFAE0;
+  --sage:       #899878;
+  --light-sage: #E4E6C3;
+  --cream:      #F7F7F2;
   --peach:      #FAEDCD;
   --tan:        #D4A373;
-  --text:       #2d2416;
-  --muted:      #8b7355;
+  --text:       #121113;
+  --muted:      #222725;
 }
 
 /* ── Reset / base ────────────────────────────────────────── */
@@ -309,6 +309,7 @@ h1, h2, h3, h4, h5, h6 {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
+  align-items: stretch;
 }
 
 .project-card {
@@ -317,6 +318,9 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 12px;
   padding: 1rem 1.1rem;
   transition: border-color 0.25s ease, transform 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .project-card:hover {
@@ -368,10 +372,13 @@ h1, h2, h3, h4, h5, h6 {
   display: grid !important;
   grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
   gap: 1rem !important;
+  align-items: stretch !important;
 }
 
 .panel-projects .project-card {
-  display: block !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
   margin: 0 !important;
   background-color: var(--light-sage) !important;
   border: 1.5px solid var(--sage) !important;
@@ -472,9 +479,9 @@ h1, h2, h3, h4, h5, h6 {
   background-color: rgba(212, 163, 115, 0.12);
 }
 
-.education-type-course {
+ .education-type-course {
   border-color: #8ea77a;
-  width: 86%;
+  width: 72%;
 }
 
 .education-type-school {
