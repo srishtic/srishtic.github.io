@@ -57,7 +57,7 @@ layout: default
         </section>
 
         <section class="branch-node">
-          <div class="branch-label">College to Real Jobs</div>
+          <div class="branch-label">Transition to Freelance Work</div>
         </section>
 
         {% assign first_role = site.data['work-history'].career_tree.past | first %}
@@ -120,6 +120,46 @@ layout: default
           </div>
         </article>
         {% endfor %}
+        <!-- College jobs (rendered after past roles) -->
+        {% if site.data['work-history'].career_tree.college_jobs %}
+        <section class="college-node">
+          <div class="freelance-grid">
+            {% for job in site.data['work-history'].career_tree.college_jobs %}
+            <article class="job-card freelance-card">
+              <div class="card-header">
+                <div class="card-title">{{ job.organization }}</div>
+                <div class="card-department">{{ job.department }}</div>
+                <div class="card-role">{{ job.title }}</div>
+                <div class="card-date">{{ job.period }}</div>
+              </div>
+              <div class="card-details">
+                {% if job.organization_description %}
+                <div class="card-block">
+                  <p class="block-text">{{ job.organization_description }}</p>
+                </div>
+                {% endif %}
+
+                {% if job.my_role %}
+                <div class="card-block">
+                  <p class="block-text">{{ job.my_role }}</p>
+                </div>
+                {% endif %}
+
+                {% if job.key_skills %}
+                <div class="card-block">
+                  <div class="skills-wrap">
+                    {% for skill in job.key_skills %}
+                    <span class="skill-pill">{{ skill }}</span>
+                    {% endfor %}
+                  </div>
+                </div>
+                {% endif %}
+              </div>
+            </article>
+            {% endfor %}
+          </div>
+        </section>
+        {% endif %}
       </div>
     </section>
   </div>
@@ -192,46 +232,7 @@ layout: default
             {% endfor %}
           </div>
 
-        <!-- College jobs (bottom of career tree) -->
-        {% if site.data['work-history'].college_jobs %}
-        <section class="college-node">
-          <div class="freelance-grid">
-            {% for job in site.data['work-history'].college_jobs %}
-            <article class="job-card freelance-card">
-              <div class="card-header">
-                <div class="card-title">{{ job.organization }}</div>
-                <div class="card-department">{{ job.department }}</div>
-                <div class="card-role">{{ job.title }}</div>
-                <div class="card-date">{{ job.period }}</div>
-              </div>
-              <div class="card-details">
-                {% if job.organization_description %}
-                <div class="card-block">
-                  <p class="block-text">{{ job.organization_description }}</p>
-                </div>
-                {% endif %}
-
-                {% if job.my_role %}
-                <div class="card-block">
-                  <p class="block-text">{{ job.my_role }}</p>
-                </div>
-                {% endif %}
-
-                {% if job.key_skills %}
-                <div class="card-block">
-                  <div class="skills-wrap">
-                    {% for skill in job.key_skills %}
-                    <span class="skill-pill">{{ skill }}</span>
-                    {% endfor %}
-                  </div>
-                </div>
-                {% endif %}
-              </div>
-            </article>
-            {% endfor %}
-          </div>
-        </section>
-        {% endif %}
+        <!-- college jobs removed from education section; rendered in employment area -->
         </div>
 
         <div class="education-courses">
@@ -257,7 +258,7 @@ layout: default
                   <div class="card-block">
                     <div class="skills-wrap">
                       {% for t in item.themes %}
-                      <span class="education-pill">{{ t }}</span>
+                      <span class="skill-pill">{{ t }}</span>
                       {% endfor %}
                     </div>
                   </div>
