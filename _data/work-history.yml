@@ -137,13 +137,17 @@ education:
     program: "MA in Global History"
     type: "degree"
     period: "2024 - Current"
+    themes:
+      - "ancient history"
+      - "south asia"
+      - "philosophy"
 
   - institution: "MITx Online"
     program: "Data Analysis for Social Scientists"
     type: "course"
     period: "Summer 2024"
     themes:
-      - "data"
+      - "data analysis"
       - "statistics"
       - "python"
 
@@ -152,9 +156,9 @@ education:
     type: "course"
     period: "Fall 2023"
     themes:
-      - "politics"
+      - "political science"
+      - "history"
       - "latin america"
-      - "area studies"
 
   - institution: "MITx Online"
     program: "Designing and Running Randomized Evaluations"
@@ -162,10 +166,14 @@ education:
     period: "Summer 2020"
     themes:
       - "randomized trials"
-      - "evaluation"
       - "research methods"
 
   - institution: "University of California, Berkeley"
     program: "BA in Political Economy"
     type: "degree"
     period: "2016 - 2019"
+    themes:
+      - "economics"
+      - "international development"
+      - "programming fundamentals (python)"
+      - "data structures (java)"

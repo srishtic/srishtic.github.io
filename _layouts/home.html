@@ -57,7 +57,7 @@ layout: default
         </section>
 
         <section class="branch-node">
-          <div class="branch-label">Transition to Freelance.</div>
+          <div class="branch-label">Transition to Freelance Work</div>
         </section>
 
         {% assign first_role = site.data['work-history'].career_tree.past | first %}
@@ -176,7 +176,7 @@ layout: default
         <article class="project-card">
           <div class="project-card-title">{{ project.title }}</div>
           {% if project.status %}
-          <div class="project-card-meta">{{ project.status }}</div>
+          <div class="project-card-meta project-card-meta-{{ project.status | slugify }}">{{ project.status }}</div>
           {% endif %}
           {% if project.summary %}
           <p class="project-card-text">{{ project.summary }}</p>

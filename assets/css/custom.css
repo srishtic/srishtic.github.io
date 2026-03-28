@@ -144,7 +144,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Job Cards */
 .job-card {
   background-color: var(--light-sage);
-  border: 1.5px solid var(--sage);
+  border: 1.5px solid #7F8A72;
   border-radius: 12px;
   padding: 1.25rem;
   cursor: default;
@@ -293,12 +293,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .freelance-card {
-  border-color: #8A927F;
+  border-color: #627866;
 }
 
 .freelance-card:nth-child(2) {
   border-color: #A5744E;
 }
+
+.college-node .job-card:nth-child(1) { border-color: #8E6A4C; }
+.college-node .job-card:nth-child(2) { border-color: #5E7668; }
+.college-node .job-card:nth-child(3) { border-color: #7A7F59; }
+.college-node .job-card:nth-child(4) { border-color: #8B7A67; }
 
 /* ── Projects List ───────────────────────────────────────── */
 .projects-section {
@@ -314,7 +319,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .project-card {
   background-color: var(--light-sage);
-  border: 1.5px solid var(--sage);
+  border: 1.5px solid #8B7A67;
   border-radius: 12px;
   padding: 1rem 1.1rem;
   transition: border-color 0.25s ease, transform 0.25s ease;
@@ -343,10 +348,16 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
-  border: 1px solid var(--sage);
+  border: 1px solid #7A7F59;
   border-radius: 999px;
   padding: 0.12rem 0.5rem;
   margin-bottom: 0.6rem;
+}
+
+.project-card-meta-in-progress {
+  border-color: #8E6A4C;
+  background-color: rgba(176, 125, 82, 0.14);
+  color: #6B4A2F;
 }
 
 .project-card-text {
@@ -381,7 +392,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between !important;
   margin: 0 !important;
   background-color: var(--light-sage) !important;
-  border: 1.5px solid var(--sage) !important;
+  border: 1.5px solid #8B7A67 !important;
   border-radius: 12px !important;
   padding: 1rem 1.1rem !important;
 }
@@ -414,18 +425,11 @@ h1, h2, h3, h4, h5, h6 {
 
 .education-timeline {
   position: relative;
-  padding-left: 2rem;
+  padding-left: 0;
 }
 
 .education-timeline::before {
-  content: '';
-  position: absolute;
-  left: 0.72rem;
-  top: 0.2rem;
-  bottom: 0.2rem;
-  width: 2px;
-  background: linear-gradient(var(--sage), var(--tan));
-  opacity: 0.7;
+  content: none;
 }
 
 .education-node {
@@ -434,20 +438,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .education-node::before {
-  content: '';
-  position: absolute;
-  left: -1.45rem;
-  top: 1.05rem;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--cream);
-  border: 2px solid var(--tan);
+  content: none;
 }
 
 .education-card {
   background-color: var(--light-sage);
-  border: 1.5px solid var(--sage);
+  border: 1.5px solid #5E7668;
   border-radius: 12px;
   padding: 1rem 1.1rem;
   min-height: 120px;
@@ -455,22 +451,22 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .education-type-degree {
-  border-color: var(--tan);
+  border-color: #8E6A4C;
   border-width: 2px;
   background-color: rgba(239, 237, 230, 0.95);
   box-shadow: 0 4px 12px rgba(30, 31, 28, 0.05);
 }
 
 .education-type-course {
-  border-color: var(--sage);
-  width: 72%;
-  margin-left: auto;
-  margin-right: auto;
+  border-color: #7A7F59;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
   background-color: var(--cream);
 }
 
 .education-type-school {
-  border-color: #8A927F;
+  border-color: #8B7A67;
 }
 
 .education-type-course .education-card-title {
@@ -501,7 +497,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .education-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  grid-template-columns: 1fr;
   gap: 0.9rem;
 }
 
@@ -636,15 +632,7 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .education-timeline {
-    padding-left: 1.6rem;
-  }
-
-  .education-timeline::before {
-    left: 0.45rem;
-  }
-
-  .education-node::before {
-    left: -1.22rem;
+    padding-left: 0;
   }
 
   .education-type-course,
