@@ -57,7 +57,7 @@ layout: default
         </section>
 
         <section class="branch-node">
-          <div class="branch-label">Transition to Freelance Work</div>
+          <div class="branch-label">Transition to Freelance.</div>
         </section>
 
         {% assign first_role = site.data['work-history'].career_tree.past | first %}
@@ -120,6 +120,9 @@ layout: default
           </div>
         </article>
         {% endfor %}
+        <section class="branch-node">
+          <div class="branch-label">College jobs to "real" jobs</div>
+        </section>
         <!-- College jobs (rendered after past roles) -->
         {% if site.data['work-history'].career_tree.college_jobs %}
         <section class="college-node">

@@ -2,13 +2,13 @@
 
 /* ── Palette ─────────────────────────────────────────────── */
 :root {
-  --sage:       #899878;
-  --light-sage: #E4E6C3;
-  --cream:      #F7F7F2;
-  --peach:      #FAEDCD;
-  --tan:        #D4A373;
-  --text:       #121113;
-  --muted:      #222725;
+  --sage:       #6F7D6A;
+  --light-sage: #D9DFD0;
+  --cream:      #EFEDE6;
+  --peach:      #C9BCAB;
+  --tan:        #B07D52;
+  --text:       #1E1F1C;
+  --muted:      #5F665E;
 }
 
 /* ── Reset / base ────────────────────────────────────────── */
@@ -55,7 +55,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0.3rem;
   border: 1px solid var(--sage);
   border-radius: 999px;
-  background-color: rgba(233, 237, 201, 0.5);
+  background-color: rgba(217, 223, 208, 0.55);
   margin-top: 0.35rem;
   margin-bottom: 1.35rem;
 }
@@ -144,7 +144,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Job Cards */
 .job-card {
   background-color: var(--light-sage);
-  border: 1.5px solid #b8c48f;
+  border: 1.5px solid var(--sage);
   border-radius: 12px;
   padding: 1.25rem;
   cursor: default;
@@ -169,7 +169,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .job-card:hover {
   border-color: var(--tan);
-  box-shadow: 0 6px 18px rgba(212, 163, 115, 0.12);
+  box-shadow: 0 6px 18px rgba(176, 125, 82, 0.14);
   transform: translateY(-2px);
 }
 
@@ -179,7 +179,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .card-header {
   margin-bottom: 0.55rem;
-  border-bottom: 1px solid #f5f5f5;
+  border-bottom: 1px solid rgba(95, 102, 94, 0.28);
   padding-bottom: 0.45rem;
 }
 
@@ -256,9 +256,9 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--cream);
 }
 
-.trunk-card.role-1 { border-color: #c98f5e; }
-.trunk-card.role-2 { border-color: #8ea77a; }
-.trunk-card.role-3 { border-color: #6f9ea1; }
+.trunk-card.role-1 { border-color: #B07D52; }
+.trunk-card.role-2 { border-color: #6F7D6A; }
+.trunk-card.role-3 { border-color: #8A927F; }
 
 .branch-node {
   position: relative;
@@ -293,11 +293,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .freelance-card {
-  border-color: #9a7ab3;
+  border-color: #8A927F;
 }
 
 .freelance-card:nth-child(2) {
-  border-color: #b07f66;
+  border-color: #A5744E;
 }
 
 /* ── Projects List ───────────────────────────────────────── */
@@ -403,7 +403,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--muted);
   border: 1px dashed var(--sage);
   border-radius: 10px;
-  background-color: rgba(233, 237, 201, 0.35);
+  background-color: rgba(217, 223, 208, 0.35);
   padding: 0.9rem 1rem;
 }
 
@@ -447,31 +447,6 @@ h1, h2, h3, h4, h5, h6 {
 
 .education-card {
   background-color: var(--light-sage);
-  border: 1.5px solid #8ea77a;
-  border-radius: 12px;
-  padding: 1rem 1.1rem;
-  min-height: 145px;
-  transition: border-color 0.25s ease, transform 0.25s ease;
-}
-
-.education-type-badge {
-  display: inline-block;
-  margin-bottom: 0.45rem;
-  font-size: 0.68rem;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-  border: 1px solid var(--sage);
-  border-radius: 999px;
-  padding: 0.12rem 0.45rem;
-}
-
-.education-type-degree {
-  border-color: #c98f5e;
-  border-width: 2px;
-  background-color: rgba(250, 237, 205, 0.55);
-  box-shadow: inset 4px 0 0 rgba(201, 143, 94, 0.45);
-  background-color: var(--light-sage);
   border: 1.5px solid var(--sage);
   border-radius: 12px;
   padding: 1rem 1.1rem;
@@ -479,65 +454,77 @@ h1, h2, h3, h4, h5, h6 {
   transition: border-color 0.25s ease, transform 0.25s ease;
 }
 
- .education-type-course {
-  border-color: #8ea77a;
-  width: 72%;
-}
-
-.education-type-school {
-  border-color: #6f9ea1;
-}
-
-.education-type-course .education-card-title {
-  font-size: 0.92rem;
-}
-
+.education-type-degree {
   border-color: var(--tan);
   border-width: 2px;
-  background-color: rgba(247,247,242,0.9);
-  box-shadow: 0 4px 12px rgba(18,17,19,0.04);
-.education-type-course .education-card-date {
-  margin-bottom: 0.5rem;
+  background-color: rgba(239, 237, 230, 0.95);
+  box-shadow: 0 4px 12px rgba(30, 31, 28, 0.05);
 }
+
+.education-type-course {
   border-color: var(--sage);
   width: 72%;
   margin-left: auto;
   margin-right: auto;
   background-color: var(--cream);
 }
-.site-footer .footer-col-1,
-.site-footer .site-title,
-.site-footer .footer-heading,
-  margin-bottom: 1rem;
-.site-footer h2 {
-  display: none;
+
+.education-type-school {
+  border-color: #8A927F;
 }
+
+.education-type-course .education-card-title {
+  font-size: 0.92rem;
+}
+
+.education-type-course .education-card-program {
+  margin-bottom: 0.35rem;
+}
+
+.education-type-course .education-card-date {
+  margin-bottom: 0.5rem;
+}
+
+.education-degrees,
+.education-courses {
+  margin-bottom: 1rem;
+}
+
+.education-section-heading {
   font-size: 0.88rem;
   font-weight: 700;
   color: var(--muted);
   margin-bottom: 0.6rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
+}
 
-.education-card:hover {
-  border-color: var(--tan);
+.education-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 0.9rem;
+}
+
+.courses-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+/* Hide repeated site name in footer while keeping footer spacing */
+.site-footer .footer-col-1,
+.site-footer .site-title,
+.site-footer .footer-heading,
+.site-footer h2 {
+  display: none;
+}
+
+.education-card:hover {
+  border-color: var(--tan);
   transform: translateY(-2px);
 }
 
-  grid-template-columns: repeat(2, minmax(0, 1fr));
 .education-card-title {
   font-size: 0.98rem;
   font-weight: 600;
-  display: inline-block;
-  border: 1px solid var(--sage);
-  border-radius: 999px;
-  padding: 0.22rem 0.55rem;
-  font-size: 0.78rem;
-  color: var(--text);
-  background-color: var(--cream);
   color: var(--text);
   margin-bottom: 0.25rem;
 }
@@ -580,7 +567,7 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--muted);
   border: 1px dashed var(--sage);
   border-radius: 10px;
-  background-color: rgba(233, 237, 201, 0.35);
+  background-color: rgba(217, 223, 208, 0.35);
   padding: 0.9rem 1rem;
 }
 
