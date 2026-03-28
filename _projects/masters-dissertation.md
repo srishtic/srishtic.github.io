@@ -11,7 +11,7 @@ From Orientalist philologists to colonial historians, many European encounters i
 
 Later scholars in the late-twentieth century explicitly countered this charge – often intentionally attempting to show the analytic nature of Indian philosophy.
 
-More recent approaches continue to navigate this tension in different ways, but what unites them is that they lead to concrete decisions about what counts as legitimate philosophical evidence and how it should be handled — whether through a focus on conceptual clarity and textual analysis (the analytic approach), or through a broader engagement with practice, materiality, and lived experience (the spiritual, mythological, religious approach).
+More recent approaches continue to navigate this tension in different ways, but what unites them is that they lead to concrete decisions about what counts as legitimate philosophical evidence and how it should be handled - whether through a focus on conceptual clarity and textual analysis (the analytic approach), or through a broader engagement with practice, materiality, and lived experience (the spiritual, mythological, religious approach).
 
 Rather than treating these approaches as competing, I take them as different ways of making certain aspects of Indian philosophy visible. My dissertation adopts the claim implicit in both: that Indian philosophy can be studied not only as a set of abstract logic/arguments, but as a way of organizing personal/lived experience. 
 

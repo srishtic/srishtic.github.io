@@ -256,9 +256,17 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--cream);
 }
 
-.trunk-card.role-1 { border-color: #B07D52; }
-.trunk-card.role-2 { border-color: #6F7D6A; }
-.trunk-card.role-3 { border-color: #8A927F; }
+/* Give each card instance its own outline color */
+.freelance-grid .job-card:nth-child(1) { border-color: #6D8A6F; }
+.freelance-grid .job-card:nth-child(2) { border-color: #9B724E; }
+.freelance-grid .job-card:nth-child(3) { border-color: #7A8361; }
+.freelance-grid .job-card:nth-child(4) { border-color: #8A6C62; }
+
+.vertical-tree > .timeline-node:nth-of-type(1) .job-card { border-color: #7A8B6E; }
+.vertical-tree > .timeline-node:nth-of-type(2) .job-card { border-color: #9A6B56; }
+.vertical-tree > .timeline-node:nth-of-type(3) .job-card { border-color: #6A7E74; }
+.vertical-tree > .timeline-node:nth-of-type(4) .job-card { border-color: #8B7D5C; }
+.vertical-tree > .timeline-node:nth-of-type(5) .job-card { border-color: #5F7469; }
 
 .branch-node {
   position: relative;
@@ -292,18 +300,10 @@ h1, h2, h3, h4, h5, h6 {
   gap: 0.9rem;
 }
 
-.freelance-card {
-  border-color: #627866;
-}
-
-.freelance-card:nth-child(2) {
-  border-color: #A5744E;
-}
-
-.college-node .job-card:nth-child(1) { border-color: #8E6A4C; }
-.college-node .job-card:nth-child(2) { border-color: #5E7668; }
-.college-node .job-card:nth-child(3) { border-color: #7A7F59; }
-.college-node .job-card:nth-child(4) { border-color: #8B7A67; }
+.college-node .job-card:nth-child(1) { border-color: #8F6849; }
+.college-node .job-card:nth-child(2) { border-color: #5B7566; }
+.college-node .job-card:nth-child(3) { border-color: #7C8356; }
+.college-node .job-card:nth-child(4) { border-color: #8D7760; }
 
 /* ── Projects List ───────────────────────────────────────── */
 .projects-section {
@@ -319,7 +319,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .project-card {
   background-color: var(--light-sage);
-  border: 1.5px solid #8B7A67;
+  border: 1.5px solid #7F8A72;
   border-radius: 12px;
   padding: 1rem 1.1rem;
   transition: border-color 0.25s ease, transform 0.25s ease;
@@ -392,7 +392,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between !important;
   margin: 0 !important;
   background-color: var(--light-sage) !important;
-  border: 1.5px solid #8B7A67 !important;
+  border: 1.5px solid #7F8A72 !important;
   border-radius: 12px !important;
   padding: 1rem 1.1rem !important;
 }
@@ -407,6 +407,20 @@ h1, h2, h3, h4, h5, h6 {
 .panel-projects .project-card-text {
   margin: 0.15rem 0 0.75rem !important;
 }
+
+.projects-grid .project-card:nth-child(1) { border-color: #6D8A6F; }
+.projects-grid .project-card:nth-child(2) { border-color: #9B724E; }
+.projects-grid .project-card:nth-child(3) { border-color: #7A8361; }
+.projects-grid .project-card:nth-child(4) { border-color: #8A6C62; }
+.projects-grid .project-card:nth-child(5) { border-color: #5F7469; }
+.projects-grid .project-card:nth-child(6) { border-color: #8B7D5C; }
+
+.panel-projects .project-card:nth-child(1) { border-color: #6D8A6F !important; }
+.panel-projects .project-card:nth-child(2) { border-color: #9B724E !important; }
+.panel-projects .project-card:nth-child(3) { border-color: #7A8361 !important; }
+.panel-projects .project-card:nth-child(4) { border-color: #8A6C62 !important; }
+.panel-projects .project-card:nth-child(5) { border-color: #5F7469 !important; }
+.panel-projects .project-card:nth-child(6) { border-color: #8B7D5C !important; }
 
 .projects-empty {
   margin: 0;
@@ -443,7 +457,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .education-card {
   background-color: var(--light-sage);
-  border: 1.5px solid #5E7668;
+  border: 1.5px solid #7F8A72;
   border-radius: 12px;
   padding: 1rem 1.1rem;
   min-height: 120px;
@@ -451,22 +465,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .education-type-degree {
-  border-color: #8E6A4C;
-  border-width: 2px;
-  background-color: rgba(239, 237, 230, 0.95);
-  box-shadow: 0 4px 12px rgba(30, 31, 28, 0.05);
+  border-width: 1.5px;
+  background-color: var(--light-sage);
+  box-shadow: none;
 }
 
 .education-type-course {
-  border-color: #7A7F59;
+  border-color: #7F8A72;
   width: 100%;
   margin-left: 0;
   margin-right: 0;
-  background-color: var(--cream);
+  background-color: var(--light-sage);
 }
 
 .education-type-school {
-  border-color: #8B7A67;
+  border-color: #7F8A72;
 }
 
 .education-type-course .education-card-title {
@@ -504,6 +517,17 @@ h1, h2, h3, h4, h5, h6 {
 .courses-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
+
+.education-degrees .education-node:nth-child(1) .education-card { border-color: #6D8A6F; }
+.education-degrees .education-node:nth-child(2) .education-card { border-color: #9B724E; }
+.education-degrees .education-node:nth-child(3) .education-card { border-color: #7A8361; }
+
+.courses-grid .education-node:nth-child(1) .education-card { border-color: #8A6C62; }
+.courses-grid .education-node:nth-child(2) .education-card { border-color: #5F7469; }
+.courses-grid .education-node:nth-child(3) .education-card { border-color: #8B7D5C; }
+.courses-grid .education-node:nth-child(4) .education-card { border-color: #6A7E74; }
+.courses-grid .education-node:nth-child(5) .education-card { border-color: #9A6B56; }
+.courses-grid .education-node:nth-child(6) .education-card { border-color: #7A8B6E; }
 
 /* Hide repeated site name in footer while keeping footer spacing */
 .site-footer .footer-col-1,
