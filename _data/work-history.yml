@@ -10,13 +10,14 @@ career_tree:
       my_role: "Led multi-institutional survey projects end-to-end (data collection, analysis, reporting), building ETL pipelines and visualizations in Python/R/SQL/Tableau and translating results into insights for institutional stakeholders."
       key_skills:
         - "Data analysis"
+        - "Institutional Research"
         - "ETL pipelines"
         - "SQL"
         - "R"
         - "Python"
         - "Tableau"
         - "Data visualization"
-        - "Survey research"
+        - "Survey design and administration"
         - "Stakeholder communication"
         - "Project management"
 
@@ -69,16 +70,15 @@ career_tree:
         - "Data reporting"
 
     - organization: "Q3Labs"
-      department: "Business Analysis & AI Solutions"
+      department: "Stealth Mode AI Startup"
       period: "Current"
-      title: "Business Analyst"
+      title: "AI Product Analyst"
       organization_description: "Company building AI tools and solutions for business applications."
       my_role: "Assisted with client business process reviews, conducted research on client operations and use cases, and supported development of insights and recommendations."
       key_skills:
-        - "Business analysis"
+        - "GitHub Copilot"
         - "Process mapping"
         - "Client research"
-        - "AI applications"
 
   # Early college roles shown at bottom of Employment section
   college_jobs:
